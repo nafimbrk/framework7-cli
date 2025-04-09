@@ -1,0 +1,324 @@
+<template>
+  <div class="page" data-name="home">
+    <!-- latihan 1 -->
+
+    <!-- navbar -->
+    <!-- <div class="navbar color-green">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="" class="link">Back</a>
+        </div>
+        <div class="title text-color-primary">App Latihan</div>
+        <div class="right">
+          <a href="" class="link">Home</a>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- toolbar -->
+    <!-- <div class="toolbar toolbar-bottom color-pink">
+      <div class="toolbar-inner">
+        <a href="#" class="link">
+          <i class="f7-icons">house</i>
+        </a>
+        <a href="#" class="link">
+          <i class="f7-icons">camera</i>
+        </a>
+        <a href="#" class="link">Link 3</a>
+        <a href="#" class="link">Link 4</a>
+      </div>
+    </div> -->
+
+    <!-- <div class="page-content bg-color-white">
+  <div class="block">
+    <p class="text-color-red">selamat belajar framework7</p>
+
+    
+    <a class="button button-fill margin-bottom color-orange">Button 1</a>
+
+    <button class="button button-fill margin-bottom color-purple">Button 2</button>
+
+    <input type="submit" class="button button-outline color-teal margin-bottom" value="Button 3" />
+
+    <i class="f7-icons">bolt</i>
+    <a href="" class="button button-fill color-teal">
+      <i class="f7-icons margin-right">cart_fill</i> keranjang belanja
+    </a>
+
+
+  </div>
+</div> -->
+
+
+<!-- latihan 2 -->
+<!-- <div class="panel panel-left">
+  <div class="list">
+    <ul>
+      <li>
+        <a class="item-content item-link">
+          <div class="item-media">
+            <i class="f7-icons">house</i>
+          </div>
+          <div class="item-inner">
+            <div class="item-title">beranda</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="item-content item-link">
+          <div class="item-media">
+            <i class="f7-icons">info</i>
+          </div>
+          <div class="item-inner">
+            <div class="item-title">info</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <a href="" class="button panel-close">
+    <i class="f7-icons">lessthan_circle</i>
+  </a>
+</div> -->
+
+
+<!-- <div class="navbar">
+  <div class="navbar-bg"></div>
+  <div class="navbar-inner">
+      <div class="left">
+        <a href="" class="panel-open">
+          <i class="f7-icons">bars</i>
+        </a>
+      </div>
+      <div class="title">latihan 2</div>
+      <div class="right">Right</div>
+  </div>
+</div> -->
+
+
+<!-- <div class="page-content">
+
+  <div class="block">
+    
+<div class="list">
+  <ul>
+    <li class="item-content item-input item-input-outline">
+      <div class="item-media">
+        <i class="f7-icons">textformat_abc</i>
+      </div>
+      <div class="item-inner">
+        <div class="item-title item-label">Nama lengkap</div>
+        <div class="item-input-wrap">
+          <input type="text" name="name" />
+          <span class="input-clear-button"></span>
+        </div>
+      </div>
+    </li>
+    <li class="item-content item-input item-input-outline">
+      <div class="item-media">
+        <i class="f7-icons">textformat_abc</i>
+      </div>
+      <div class="item-inner">
+        <div class="item-title item-label">jenis kelamin</div>
+        <div class="item-input-wrap input-dropdown-wrap">
+          <select name="" id="">
+            <option value="">--pilih--</option>
+            <option value="">laki-laki</option>
+            <option value="">perempuan</option>
+          </select>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <button class="button button-outline color-red margin-bottom">kirim</button>
+</div>
+
+
+    <button class="button button-fill panel-open  ">buka panel</button>
+  
+<div class="list simple-list">
+  <ul>
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+  </ul>
+</div>
+
+<div class="list">
+  <ul>
+    <li>
+      <a class="item-content item-link">
+        <div class="item-media">
+          <i class="f7-icons">house</i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">beranda</div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a class="item-content item-link">
+        <div class="item-media">
+          <i class="f7-icons">info</i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">info</div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="list links-list">
+  <ul>
+    <li>
+      <a href="">list 1</a>
+    </li>
+    <li>
+      <a href="">list 2</a>
+    </li>
+    <li>
+      <a href="">list 3</a>
+    </li>
+  </ul>
+</div>
+  </div>
+
+</div> -->
+  
+
+<!-- latihan 3 -->
+
+<div class="navbar">
+  <div class="navbar-bg"></div>
+  <div class="navbar-inner">
+      <div class="title">message box</div>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="block">
+    <div class="card card-raise">
+      <div class="card-header">komponen dialog</div>
+      <div class="card-content card-content-padding">
+        <button class="button button-fill margin-bottom" @click="${pesan}">dialog</button>
+        <button class="button button-fill margin-bottom" @click="${pesan2}">confirm</button>
+        <button class="button button-fill" @click="${pesan3}">prompt</button>
+      </div>
+    </div>
+    <div class="card card-raise">
+      <div class="card-header">komponen toast</div>
+      <div class="card-content card-content-padding">
+        <button class="button button-fill margin-bottom" @click="${toast1}">toast</button>
+        <button class="button button-fill margin-bottom" @click="${toast2}">toast top</button>
+        <button class="button button-fill margin-bottom" @click="${toast3}">toast center</button>
+        <button class="button button-fill" @click="${toast4}">toast icon</button>
+      </div>
+    </div>
+    <div class="card card-raise">
+      <div class="card-header">komponen notifikasi</div>
+      <div class="card-content card-content-padding">
+        <button class="button button-fill margin-bottom" @click="${notif}">notifikasi</button>
+        <button class="button button-fill" @click="${notif2}">notifikasi close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</template>
+<script>
+  export default (props, { $f7 }) => {
+
+    const pesan = () => {
+      $f7.dialog.alert("halo apa kabar?", "pesan")
+    }
+
+    const pesan2 = () => {
+      $f7.dialog.confirm("yakin mau keluar?", "informasi", function () {
+        $f7.dialog.alert("terimakasih telah berkunjung", "informasi")
+      })
+    }
+
+    const pesan3 = () => {
+      $f7.dialog.prompt("masukkan nama", "informasi", function (nama) {
+        $f7.dialog.confirm("yakin nama anda " + nama + "?", "informasi", function() {
+          $f7.dialog.alert("nama anda = " + nama, "informasi")
+        })
+      })
+    }
+
+    let t1;
+    let t2;
+    let t3;
+    let t4;
+    let n;
+    let n2;
+
+    const toast1 = () => {
+      t1 = $f7.toast.create({
+        text: 'halo ini adalah toast!',
+        closeTimeout: 3000
+      })
+      t1.open()
+    }
+
+    const toast2 = () => {
+      t2 = $f7.toast.create({
+        text: 'halo ini adalah toast!',
+        closeTimeout: 3000,
+        position: 'top'
+      })
+      t2.open()
+    }
+
+    const toast3 = () => {
+      t3 = $f7.toast.create({
+        text: 'halo ini adalah toast!',
+        closeTimeout: 3000,
+        closeButtonText: 'tutup',
+        closeButton: true,
+        position: 'center'
+      })
+      t3.open()
+    }
+
+    const toast4 = () => {
+      t4 = $f7.toast.create({
+        text: 'halo ini adalah toast!',
+        closeTimeout: 3000,
+        icon: '<i class="f7-icons">house</i>',
+        position: 'center'
+      })
+      t4.open()
+    }
+
+    const notif = () => {
+      n = $f7.notification.create({
+        title: 'notifikasi app',
+        titleRightText: 'now',
+        subtitle: 'ada pesan baru!',
+        text: 'ini pesan notifikasi',
+        closeTimeout: 3000,
+        icon: '<i class="f7-icons">house</i>'
+      })
+      n.open()
+    }
+
+    const notif2= () => {
+      n2 = $f7.notification.create({
+        title: 'notifikasi app',
+        closeButton: true,
+        titleRightText: 'now',
+        subtitle: 'ada pesan baru!',
+        text: 'ini pesan notifikasi',
+        closeTimeout: 3000,
+        icon: '<i class="f7-icons">house</i>'
+      })
+      n2.open()
+    }
+
+    return $render;
+  };
+</script>
