@@ -91,8 +91,7 @@
           <i class="f7-icons">bars</i>
         </a>
       </div>
-      <div class="title">latihan 2</div>
-      <div class="right">Right</div>
+      <div class="tiHome 2</div>
   </div>
 </div> -->
 
@@ -188,137 +187,50 @@
 </div> -->
   
 
-<!-- latihan 3 -->
+
+<!-- route -->
 
 <div class="navbar">
   <div class="navbar-bg"></div>
   <div class="navbar-inner">
-      <div class="title">message box</div>
+      <div class="title">Home</div>
   </div>
 </div>
 
 <div class="page-content">
   <div class="block">
-    <div class="card card-raise">
-      <div class="card-header">komponen dialog</div>
-      <div class="card-content card-content-padding">
-        <button class="button button-fill margin-bottom" @click="${pesan}">dialog</button>
-        <button class="button button-fill margin-bottom" @click="${pesan2}">confirm</button>
-        <button class="button button-fill" @click="${pesan3}">prompt</button>
-      </div>
-    </div>
-    <div class="card card-raise">
-      <div class="card-header">komponen toast</div>
-      <div class="card-content card-content-padding">
-        <button class="button button-fill margin-bottom" @click="${toast1}">toast</button>
-        <button class="button button-fill margin-bottom" @click="${toast2}">toast top</button>
-        <button class="button button-fill margin-bottom" @click="${toast3}">toast center</button>
-        <button class="button button-fill" @click="${toast4}">toast icon</button>
-      </div>
-    </div>
-    <div class="card card-raise">
-      <div class="card-header">komponen notifikasi</div>
-      <div class="card-content card-content-padding">
-        <button class="button button-fill margin-bottom" @click="${notif}">notifikasi</button>
-        <button class="button button-fill" @click="${notif2}">notifikasi close</button>
-      </div>
-    </div>
+    <p>ini halaman home</p>
   </div>
 </div>
 
+
+
+<div class="toolbar toolbar-bottom">
+  <div class="toolbar-inner">
+    <a href="/" class="link">
+      <i class="f7-icons">house</i>
+    </a>
+    <a href="/profil/" class="link">
+      <i class="f7-icons">person</i>
+    </a>
+    <a href="/kontak/" class="link">
+      <i class="f7-icons">phone</i>
+    </a>
+  </div>
+</div>
+
+
 </div>
 </template>
+
+
+
 <script>
-  export default (props, { $f7 }) => {
-
-    const pesan = () => {
-      $f7.dialog.alert("halo apa kabar?", "pesan")
-    }
-
-    const pesan2 = () => {
-      $f7.dialog.confirm("yakin mau keluar?", "informasi", function () {
-        $f7.dialog.alert("terimakasih telah berkunjung", "informasi")
-      })
-    }
-
-    const pesan3 = () => {
-      $f7.dialog.prompt("masukkan nama", "informasi", function (nama) {
-        $f7.dialog.confirm("yakin nama anda " + nama + "?", "informasi", function() {
-          $f7.dialog.alert("nama anda = " + nama, "informasi")
-        })
-      })
-    }
-
-    let t1;
-    let t2;
-    let t3;
-    let t4;
-    let n;
-    let n2;
-
-    const toast1 = () => {
-      t1 = $f7.toast.create({
-        text: 'halo ini adalah toast!',
-        closeTimeout: 3000
-      })
-      t1.open()
-    }
-
-    const toast2 = () => {
-      t2 = $f7.toast.create({
-        text: 'halo ini adalah toast!',
-        closeTimeout: 3000,
-        position: 'top'
-      })
-      t2.open()
-    }
-
-    const toast3 = () => {
-      t3 = $f7.toast.create({
-        text: 'halo ini adalah toast!',
-        closeTimeout: 3000,
-        closeButtonText: 'tutup',
-        closeButton: true,
-        position: 'center'
-      })
-      t3.open()
-    }
-
-    const toast4 = () => {
-      t4 = $f7.toast.create({
-        text: 'halo ini adalah toast!',
-        closeTimeout: 3000,
-        icon: '<i class="f7-icons">house</i>',
-        position: 'center'
-      })
-      t4.open()
-    }
-
-    const notif = () => {
-      n = $f7.notification.create({
-        title: 'notifikasi app',
-        titleRightText: 'now',
-        subtitle: 'ada pesan baru!',
-        text: 'ini pesan notifikasi',
-        closeTimeout: 3000,
-        icon: '<i class="f7-icons">house</i>'
-      })
-      n.open()
-    }
-
-    const notif2= () => {
-      n2 = $f7.notification.create({
-        title: 'notifikasi app',
-        closeButton: true,
-        titleRightText: 'now',
-        subtitle: 'ada pesan baru!',
-        text: 'ini pesan notifikasi',
-        closeTimeout: 3000,
-        icon: '<i class="f7-icons">house</i>'
-      })
-      n2.open()
-    }
-
+  export default () => {
     return $render;
   };
 </script>
+
+
+
+
