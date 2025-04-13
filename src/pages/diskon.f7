@@ -1,0 +1,73 @@
+<template>
+    <div class="page" data-name="diskon">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="" class="back">back</a>
+              </div>
+              <div class="title">hitung diskon</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+                <div class="list">
+                    <ul>
+                      <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                          <adiv class="item-title item-label">total belanja</adiv>
+                          <div class="item-input-wrap">
+                            <input type="text" id="total" />
+                            <span class="input-clear-button"></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                          <adiv class="item-title item-label">diskon</adiv>
+                          <div class="item-input-wrap">
+                            <input type="text" id="diskon" />
+                            <span class="input-clear-button"></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                          <adiv class="item-title item-label">bayar</adiv>
+                          <div class="item-input-wrap">
+                            <input type="text" id="bayar" />
+                            <span class="input-clear-button"></span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    </div>
+                    <button class="button color-red button-fill" @click="${hitung}">hitung diskon</button>
+            </div>
+          </div>
+    </div>
+</template>
+
+<script>
+    import $ from 'dom7'
+    export default () => {
+
+        const hitung = () => {
+            var x = $('#total').val()
+            if (x >= 2000000) {
+                var diskon = 0.3 * x
+            } else if (x >= 1000000) {
+                var diskon = 0.2 * x
+            } else if (x >= 1000000){
+                var diskon = 0.1 * x
+            } else {
+                var diskon = 0
+            }
+            var bayar = x - diskon
+            $('#diskon').val(diskon)
+            $('#bayar').val(bayar)
+        } 
+
+        return $render
+    }
+</script>

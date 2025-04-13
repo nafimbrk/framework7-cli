@@ -190,7 +190,7 @@
 
 <!-- route -->
 
-<div class="navbar">
+<!-- <div class="navbar">
   <div class="navbar-bg"></div>
   <div class="navbar-inner">
       <div class="title">Home</div>
@@ -217,8 +217,35 @@
       <i class="f7-icons">phone</i>
     </a>
   </div>
+</div> -->
+
+
+
+
+
+<!-- get json -->
+
+<div class="navbar">
+  <div class="navbar-bg"></div>
+  <div class="navbar-inner">
+      <div class="title">belajar json</div>
+  </div>
 </div>
 
+
+<div class="page-content">
+  <div class="block">
+
+    <div class="list links-list">
+      <ul id="tampil">
+        <li>
+          <a href="#">Link Item 1</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</div>
 
 </div>
 </template>
@@ -226,7 +253,36 @@
 
 
 <script>
-  export default () => {
+
+  
+
+
+
+
+
+
+  
+  // get json
+
+  export default (props, { $f7, $ }) => {
+    fetch('http://127.0.0.1:8000/api/biodata', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => response.json()).then(res => {
+      console.log(res)
+      console.log(res[0].nama)
+      var tmp = ""
+      for (var i in res) {
+        tmp += `<li>
+          <a href="#">` + res[i].nama + `</a>
+          </li>`
+      }
+      $('#tampil').html(tmp)
+    })
+  
+
     return $render;
   };
 </script>
