@@ -6,6 +6,9 @@ import Kontak from '../pages/kontak.f7';
 import Matematika from '../pages/matematika.f7';
 import Diskon from '../pages/diskon.f7';
 
+import TambahPage from '../pages/tambah.f7';
+import EditPage from '../pages/edit.f7';
+
 var routes = [
   {
     path: '/',
@@ -26,6 +29,14 @@ var routes = [
   {
     path: '/diskon/',
     component: Diskon,
+  },
+  {
+    path: '/tpegawai/',
+    component: TambahPage,
+  },
+  {
+    path: '/edit/:id/',
+    component: EditPage,
   },
 ];
 

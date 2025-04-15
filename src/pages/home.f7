@@ -223,29 +223,33 @@
 
 
 
-<!-- get json -->
 
+
+
+
+
+
+
+<!-- read data -->
 <div class="navbar">
   <div class="navbar-bg"></div>
   <div class="navbar-inner">
-      <div class="title">belajar json</div>
+      <div class="title">read data</div>
   </div>
 </div>
 
 
 <div class="page-content">
-  <div class="block">
 
     <div class="list links-list">
-      <ul id="tampil">
-        <li>
-          <a href="#">Link Item 1</a>
-        </li>
-      </ul>
+      <div class="block">
+        <ul id="pegawai">
+        </ul>
+      </div>
     </div>
-    
-  </div>
+    <a href="/tpegawai/" class="button button-fill color-green">tambah pegawai</a>
 </div>
+
 
 </div>
 </template>
@@ -262,29 +266,38 @@
 
 
   
-  // get json
-
-  export default (props, { $f7, $ }) => {
-    fetch('http://127.0.0.1:8000/api/biodata', {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => response.json()).then(res => {
-      console.log(res)
-      console.log(res[0].nama)
-      var tmp = ""
-      for (var i in res) {
-        tmp += `<li>
-          <a href="#">` + res[i].nama + `</a>
-          </li>`
-      }
-      $('#tampil').html(tmp)
-    })
   
 
+
+
+  // read data
+  import $ from 'dom7';
+  export default (props, { $f7 }) => {
+    function getPegawai() {
+      fetch('http://127.0.0.1:8000/api/pegawai', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+      }).then(respon => respon.json())
+      .then(result => {
+        console.log(result)
+        var isi = "";
+        for (var i = 0; i < result.data.length; i++) {
+          isi += `
+          <li>
+            <a href="#" id="data" data-id="` + result.data[i].nip + `">` + result.data[i].nama + `</a>
+          </li>
+          `;
+        }
+        $('#pegawai').html(isi)
+      })
+    }
+    getPegawai()
+    $(document).on('click', '#data', function () {
+      var x = $(this).data('id')
+      $f7.views.main.router.navigate('/edit/' + x + '/')
+    })
     return $render;
-  };
+  }
 </script>
 
 
